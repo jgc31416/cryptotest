@@ -15,7 +15,7 @@ func main() {
 	var textCiphered string
 	var byteText []byte
 	var keyLenght int
-	fmt.Println("I'm going to apply and crack vigenere")
+	fmt.Println("I'm going to crack vigenere")
 
 	fmt.Scanln(&textCiphered)
 	byteText, _ = hex.DecodeString(textCiphered)
@@ -23,6 +23,8 @@ func main() {
 	keyLenght = getKeyLenght(byteText)
 	fmt.Printf("\nKey length: %d\n", keyLenght)
 	guessKey(keyLenght, byteText)
+
+	//Key found after fiddling around a bit
 	key := []byte{
 		186, 31, 145, 178, 83, 205, 62,
 	}
